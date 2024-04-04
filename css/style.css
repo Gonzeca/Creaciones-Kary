@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic&family=Charmonman:wght@400;700&display=swap');
+
+* {
+    font-family: "Antic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fafbfd;
+}
+
+ul li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: #e5be01;
+}
+
+nav img {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+nav ul .lists {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    background-color: #20214f;
+    padding: 10px 35px;
+    font-size: 1.2em;
+    color: #fafbfd;
+}
+
+nav ul li.registerList {
+    background-color: #b81d33;
+    margin-left: 50px;
+    border-radius: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #fafbfd;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 75px;
+    background-image: url("../media/pngtree-simple-trend-clothing-store-background-home-image_148028.jpg");
+    background-size: cover;
+}
+
+main .mainText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    width: 50%;
+}
+
+main div h1 {
+    font-family: "Charmonman", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3em;
+    color: #b81d33;
+}
+
+main div h4 {
+    width: 55%;
+    font-size: 1.6em;
+    text-align: right;
+    color: #b81d33;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    width: 350px;
+    padding: 25px 50px;
+    border: black solid 1px;
+    background-color: #e5be01;
+}
+
+main form h3 {
+    font-size: 2em;
+    text-align: center;
+}
+
+main form label {
+    font-size: 1.4em;
+}
+
+main form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main form .inputs input {
+    padding: 15px 5px;
+    font-size: 1.2em;
+}
+
+main form input[type='submit'] {
+    width: 40%;
+    height: 40px;
+    border: black solid 1px;
+    margin-left: 30%;
+    font-size: 1.3em;
+    color: #fafbfd;
+    background-color: #b81d33;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: #20214f;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 1.1em;
+}
+
+footer ul li a {
+    color: #fafbfd;
+}
