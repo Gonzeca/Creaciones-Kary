@@ -5,7 +5,7 @@
     font-weight: 400;
     font-style: normal;
     padding: 0;
-    margin: 0;
+    margin: 0 !important;
 }
 
 body {
@@ -26,34 +26,48 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
-    background-color: #e5be01;
+    height: 100px;
+    background-color: black;
 }
 
 nav img {
-    height: 60px;
+    height: 100px;
 }
 
 nav ul {
     display: flex;
     align-items: center;
-    height: 100px;
+    justify-content: space-between;
+    width: 60%;
 }
 
 nav ul .lists {
     display: flex;
     align-items: center;
+    column-gap: 5px;
 }
 
-nav ul li {
-    background-color: #20214f;
-    padding: 10px 35px;
-    font-size: 1.2em;
+.commonButton {
+    transition: 0.5s;
+    background-color: none;
+    border-bottom: #fcfcfc 1px solid;
     color: #fafbfd;
 }
 
-nav ul li.registerList {
-    background-color: #b81d33;
+.commonButton:hover {
+    background-color: #fcfcfc;
+    color: black;
+}
+
+nav ul li {
+    padding: 10px 50px;
+    font-size: 1.2em;
+}
+
+nav ul li.loginList {
+    background-color: #760817;
     margin-left: 50px;
+    border: none;
     border-radius: 10px;
     font-size: 1.4em;
     font-weight: bold;
@@ -65,7 +79,7 @@ main {
     display: flex;
     justify-content: center;
     padding: 75px;
-    background-image: url("../media/pngtree-simple-trend-clothing-store-background-home-image_148028.jpg");
+    background-color: #eee3d7;
     background-size: cover;
 }
 
@@ -82,14 +96,14 @@ main div h1 {
     font-weight: 700;
     font-style: normal;
     font-size: 3em;
-    color: #b81d33;
+    color: black;
 }
 
 main div h4 {
     width: 55%;
     font-size: 1.6em;
     text-align: right;
-    color: #b81d33;
+    color: black;
 }
 
 main form {
@@ -97,10 +111,11 @@ main form {
     flex-direction: column;
     justify-content: space-between;
     height: 600px;
-    width: 350px;
+    width: 500px;
     padding: 25px 50px;
-    border: black solid 1px;
-    background-color: #e5be01;
+    border: #fcfcfc solid 1px;
+    color: #fcfcfc;
+    background-color: black;
 }
 
 main form h3 {
@@ -124,20 +139,21 @@ main form .inputs input {
 }
 
 main form input[type='submit'] {
-    width: 40%;
+    width: 50%;
     height: 40px;
-    border: black solid 1px;
-    margin-left: 30%;
+    border: none;
+    border-bottom: #fcfcfc solid 1px;
+    margin-left: 25% !important;
     font-size: 1.3em;
     color: #fafbfd;
-    background-color: #b81d33;
+    background-color: transparent;
 }
 
 footer {
     display: flex;
     justify-content: space-around;
     padding: 50px;
-    background-color: #20214f;
+    background-color: black;
 }
 
 footer ul {
