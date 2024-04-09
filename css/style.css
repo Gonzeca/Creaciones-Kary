@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Antic&family=Charmonman:wght@400;700&display=swap');
 
+/*--------------------LANDING--------------------*/
+
 * {
     font-family: "Antic", sans-serif;
     font-weight: 400;
     font-style: normal;
     padding: 0;
-    margin: 0 !important;
+    margin: 0;
 }
 
 body {
-    background-color: #fafbfd;
+    position: relative;
+    background-color: #eee3d7;
+    min-height: 100vh;
 }
 
 ul li{
@@ -38,7 +42,6 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 60%;
 }
 
 nav ul .lists {
@@ -78,81 +81,18 @@ nav ul li.loginList {
 main {
     display: flex;
     justify-content: center;
-    padding: 75px;
-    background-color: #eee3d7;
+    padding-bottom: 150px;
     background-size: cover;
 }
 
-main .mainText {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 80px;
-    width: 50%;
-}
-
-main div h1 {
-    font-family: "Charmonman", cursive;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 3em;
-    color: black;
-}
-
-main div h4 {
-    width: 55%;
-    font-size: 1.6em;
-    text-align: right;
-    color: black;
-}
-
-main form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 600px;
-    width: 500px;
-    padding: 25px 50px;
-    border: #fcfcfc solid 1px;
-    color: #fcfcfc;
-    background-color: black;
-}
-
-main form h3 {
-    font-size: 2em;
-    text-align: center;
-}
-
-main form label {
-    font-size: 1.4em;
-}
-
-main form .inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-main form .inputs input {
-    padding: 15px 5px;
-    font-size: 1.2em;
-}
-
-main form input[type='submit'] {
-    width: 50%;
-    height: 40px;
-    border: none;
-    border-bottom: #fcfcfc solid 1px;
-    margin-left: 25% !important;
-    font-size: 1.3em;
-    color: #fafbfd;
-    background-color: transparent;
-}
-
 footer {
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: space-around;
-    padding: 50px;
+    align-items: center;
+    width: 100%;
+    height: 150px;
     background-color: black;
 }
 
@@ -166,3 +106,185 @@ footer ul {
 footer ul li a {
     color: #fafbfd;
 }
+
+/*--------------------INDEX--------------------*/
+
+main.indexMain {
+    padding: 75px 75px 225px 75px;
+}
+
+main.indexMain .mainText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    width: 50%;
+}
+
+main.indexMain div h1 {
+    font-family: "Charmonman", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3em;
+    color: black;
+}
+
+main.indexMain div h4 {
+    width: 55%;
+    font-size: 1.6em;
+    text-align: right;
+    color: black;
+}
+
+main.indexMain form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    width: 500px;
+    padding: 25px 50px;
+    border: #fcfcfc solid 1px;
+    color: #fcfcfc;
+    background-color: black;
+}
+
+main.indexMain form h3 {
+    font-size: 2em;
+    text-align: center;
+}
+
+main.indexMain form label {
+    font-size: 1.4em;
+}
+
+main.indexMain form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+main.indexMain form .inputs input {
+    padding: 15px 5px;
+    font-size: 1.2em;
+}
+
+main.indexMain form input[type='submit'] {
+    width: 50%;
+    height: 40px;
+    border: none;
+    border-bottom: #fcfcfc solid 1px;
+    margin-left: 25% !important;
+    font-size: 1.3em;
+    color: #fcfcfc;
+    background-color: transparent;
+}
+
+/*--------------------PRODUCTOS--------------------*/
+
+main.productosMain {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-right: lightgray solid 1px;
+    background-color: #fcfcfc;
+}
+
+aside h4 {
+    text-align: center;
+}
+
+aside .categories {
+    display: flex;
+    flex-direction: column;
+}
+
+aside .categories p .btn-primary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: none;
+    border-radius: 0px;
+    border-bottom: black solid 1px;
+    background-color: transparent;
+    color: black;
+}
+
+aside .categories p .btn-primary:active {
+    background-color: #760817;
+}
+
+aside .categories .collapse .card, aside .categories .collapsing .card{
+    border: 0px none transparent !important;
+}
+
+aside .categories .collapse .card .category, aside .categories .collapsing .card .category{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.productosPage .productosHeader {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 40px;
+}
+
+.productosPage .productosArticles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px;
+    padding: 30px;
+}
+
+.productosPage .productosArticles article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    width: 300px;
+    height: 400px;
+    border: lightgrey solid 1px;
+    background-color: #cae3d7;
+    transition: 0.4s;
+}
+
+.productosPage .productosArticles article:hover {
+    transform: scale(1.2);
+}
+
+.productosPage .productosArticles article img {
+    width: 250px;
+    height: 300px;
+}
+
+.productosPage .productosArticles article .articleDesc {
+    font-size: 1.2em
+}
+
+.productosPage .productosArticles article .articleAdds {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.productosPage .productosArticles article .articleAdds .articlePrice {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.productosPage .productosArticles article .articleAdds .articleButton {
+    background-color: #d7cae3;
+}
+
+/*--------------------ABOUT US--------------------*/
+
