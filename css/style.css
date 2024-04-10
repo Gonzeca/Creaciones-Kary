@@ -13,10 +13,11 @@
 body {
     position: relative;
     background-color: #eee3d7;
+    width: 100vw;
     min-height: 100vh;
 }
 
-ul li{
+ul li {
     list-style: none;
 }
 
@@ -65,7 +66,7 @@ nav ul .lists {
 
 nav ul li {
     padding: 10px 50px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 nav ul li.loginList {
@@ -74,7 +75,7 @@ nav ul li.loginList {
     margin-left: 50px;
     border: none;
     border-radius: 10px;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     font-weight: bold;
     letter-spacing: 3px;
     color: #fafbfd;
@@ -106,7 +107,7 @@ footer ul {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 footer ul li a {
@@ -122,19 +123,20 @@ main.indexMain {
 }
 
 main.indexMain .carousel {
-    width: 1500px;
+    width: 100vw;
     height: 600px;
     margin-bottom: 50px;
     background-color: #cae3d7;
 }
 
 main.indexMain .carousel img {
-    max-width: 1500px;
+    max-width: 100vw;
     height: 600px;
     object-fit: contain;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
     border-radius: 50%;
     background-color: black;
 }
@@ -155,13 +157,13 @@ main.indexMain .indexPresentation div h1 {
     font-family: "Charmonman", cursive;
     font-weight: 700;
     font-style: normal;
-    font-size: 3em;
+    font-size: 3rem;
     color: black;
 }
 
 main.indexMain .indexPresentation div h4 {
     width: 55%;
-    font-size: 1.6em;
+    font-size: 1.6rem;
     text-align: right;
     color: black;
 }
@@ -184,12 +186,12 @@ form a {
 }
 
 form h3 {
-    font-size: 2em;
+    font-size: 2rem;
     text-align: center;
 }
 
 form label {
-    font-size: 1.4em;
+    font-size: 1.4rem;
 }
 
 form .inputs {
@@ -200,7 +202,7 @@ form .inputs {
 
 form .inputs input {
     padding: 15px 5px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 form input[type='submit'] {
@@ -209,7 +211,7 @@ form input[type='submit'] {
     border: none;
     border-bottom: #fcfcfc solid 1px;
     margin-left: 25% !important;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 /*--------------------PRODUCTOS--------------------*/
@@ -251,11 +253,13 @@ aside .categories p .btn-primary:active {
     background-color: #760817;
 }
 
-aside .categories .collapse .card, aside .categories .collapsing .card{
+aside .categories .collapse .card,
+aside .categories .collapsing .card {
     border: 0px none transparent !important;
 }
 
-aside .categories .collapse .card .category, aside .categories .collapsing .card .category{
+aside .categories .collapse .card .category,
+aside .categories .collapsing .card .category {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -311,7 +315,7 @@ aside .categories .collapse .card .category, aside .categories .collapsing .card
 }
 
 .productosPage .productosArticles article .articleAdds .articlePrice {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
@@ -327,7 +331,7 @@ main.aboutusMain {
     padding-bottom: 200px;
 }
 
-.aboutusMain > img {
+.aboutusMain>img {
     max-width: 60%;
     margin-bottom: 200px;
 }
@@ -335,37 +339,37 @@ main.aboutusMain {
 .aboutusMain h1 {
     position: absolute;
     top: calc(100px + 4%);
-    font-size: 6em;
+    font-size: 6rem;
 }
 
-.aboutusMain .features .feature{
+.aboutusMain .features .feature {
     display: flex;
     align-items: center;
     padding-left: 100px;
     margin-right: 100px;
 }
 
-.aboutusMain .features .feature:nth-child(1){
+.aboutusMain .features .feature:nth-child(1) {
     background-color: #375e97;
 }
 
-.aboutusMain .features .feature:nth-child(2){
+.aboutusMain .features .feature:nth-child(2) {
     padding: 0 100px 0 0;
     margin: 0 0 0 100px;
     background-color: #fb6542;
 }
 
-.aboutusMain .features .feature:nth-child(3){
+.aboutusMain .features .feature:nth-child(3) {
     background-color: #3f681c;
 }
 
-.aboutusMain .features .feature span{
+.aboutusMain .features .feature span {
     padding: 0 20px;
-    font-size: 1.8em;
+    font-size: 1.8rem;
     color: #fcfcfc;
 }
 
-.aboutusMain .features .feature img{
+.aboutusMain .features .feature img {
     width: 300px;
     height: 300px;
 }
@@ -381,4 +385,163 @@ main.loginMain {
 .loginMain form .formFooter {
     display: flex;
     justify-content: space-between;
+}
+
+/*--------------------RESPONSIVE--------------------*/
+
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    nav ul li {
+        padding: 4px 15px;
+    }
+
+    main.indexMain .indexPresentation div h4 {
+        width: 80%;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav img {
+        height: 80px;
+    }
+
+    nav {
+        padding: 0 5px;
+    }
+
+    ol,
+    ul {
+        padding-left: 0;
+    }
+
+    nav ul li.loginList {
+        margin-left: 10px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .productosPage .productosArticles {
+        gap: 100px;
+        padding: 15px;
+    }
+
+    .productosPage .productosArticles article {
+        width: 200px;
+        height: 333px;
+    }
+
+    .productosPage .productosArticles article img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .productosPage .productosArticles article .articleDesc {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .productosPage .productosArticles article .articleAdds .articlePrice {
+        font-size: 1.2rem;
+    }
+
+    .productosPage .productosArticles article .articleAdds .articleButton {
+        padding: 3px 10px;
+        font-size: 0.8rem;
+    }
+
+    .aboutusMain h1 {
+        top: calc(100px + 1.5%);
+        font-size: 3rem;
+    }
+
+    .aboutusMain .features .feature span {
+        font-size: 1.1rem;
+    }
+
+    .aboutusMain .features .feature img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav img {
+        height: 60px;
+    }
+
+    nav ul li {
+        padding: 5px 5px;
+        font-size: 1rem;
+    }
+
+    main.indexMain .carousel,
+    main.indexMain .carousel img {
+        height: 400px;
+    }
+
+    main.indexMain .indexPresentation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main.indexMain .indexPresentation .mainText {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    aside {
+        padding: 15px;
+    }
+
+    .productosPage .productosArticles {
+        gap: 40px;
+        padding: 5px;
+    }
+
+    .productosPage .productosArticles article {
+        width: 125px;
+        height: 200px;
+    }
+
+    .productosPage .productosArticles article img {
+        width: 100px;
+        height: 150px;
+    }
+
+    .productosPage .productosArticles article .articleDesc {
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    .productosPage .productosArticles article .articleAdds .articlePrice {
+        font-size: 0.8rem;
+    }
+
+    .productosPage .productosArticles article .articleAdds .articleButton {
+        padding: 3px 5px;
+        font-size: 0.6rem;
+    }
+
+    .aboutusMain>img {
+        margin-bottom: 50px;
+    }
+
+    .aboutusMain .features .feature span {
+        font-size: 0.8rem;
+    }
+
+    .aboutusMain .features .feature img {
+        width: 150px;
+        height: 150px;
+    }
+
+    form {
+        height: 500px;
+        width: 400px;
+    }
 }
