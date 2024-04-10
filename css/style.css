@@ -42,6 +42,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 0;
 }
 
 nav ul .lists {
@@ -52,7 +53,7 @@ nav ul .lists {
 
 .commonButton {
     transition: 0.5s;
-    background-color: none;
+    background-color: transparent;
     border-bottom: #fcfcfc 1px solid;
     color: #fafbfd;
 }
@@ -68,6 +69,7 @@ nav ul li {
 }
 
 nav ul li.loginList {
+    transition: 0.4s;
     background-color: #760817;
     margin-left: 50px;
     border: none;
@@ -76,6 +78,10 @@ nav ul li.loginList {
     font-weight: bold;
     letter-spacing: 3px;
     color: #fafbfd;
+}
+
+nav ul li.loginList:hover {
+    background-color: #b60c23;
 }
 
 main {
@@ -110,10 +116,34 @@ footer ul li a {
 /*--------------------INDEX--------------------*/
 
 main.indexMain {
+    flex-direction: column;
+    align-items: center;
     padding: 75px 75px 225px 75px;
 }
 
-main.indexMain .mainText {
+main.indexMain .carousel {
+    width: 1500px;
+    height: 600px;
+    margin-bottom: 50px;
+    background-color: #cae3d7;
+}
+
+main.indexMain .carousel img {
+    max-width: 1500px;
+    height: 600px;
+    object-fit: contain;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    border-radius: 50%;
+    background-color: black;
+}
+
+main.indexMain .indexPresentation {
+    display: flex;
+}
+
+main.indexMain .indexPresentation .mainText {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,7 +151,7 @@ main.indexMain .mainText {
     width: 50%;
 }
 
-main.indexMain div h1 {
+main.indexMain .indexPresentation div h1 {
     font-family: "Charmonman", cursive;
     font-weight: 700;
     font-style: normal;
@@ -129,14 +159,14 @@ main.indexMain div h1 {
     color: black;
 }
 
-main.indexMain div h4 {
+main.indexMain .indexPresentation div h4 {
     width: 55%;
     font-size: 1.6em;
     text-align: right;
     color: black;
 }
 
-main.indexMain form {
+form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -148,35 +178,38 @@ main.indexMain form {
     background-color: black;
 }
 
-main.indexMain form h3 {
+form a {
+    text-decoration: underline;
+    color: rgb(77, 91, 214);
+}
+
+form h3 {
     font-size: 2em;
     text-align: center;
 }
 
-main.indexMain form label {
+form label {
     font-size: 1.4em;
 }
 
-main.indexMain form .inputs {
+form .inputs {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-main.indexMain form .inputs input {
+form .inputs input {
     padding: 15px 5px;
     font-size: 1.2em;
 }
 
-main.indexMain form input[type='submit'] {
+form input[type='submit'] {
     width: 50%;
     height: 40px;
     border: none;
     border-bottom: #fcfcfc solid 1px;
     margin-left: 25% !important;
     font-size: 1.3em;
-    color: #fcfcfc;
-    background-color: transparent;
 }
 
 /*--------------------PRODUCTOS--------------------*/
@@ -288,3 +321,64 @@ aside .categories .collapse .card .category, aside .categories .collapsing .card
 
 /*--------------------ABOUT US--------------------*/
 
+main.aboutusMain {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 200px;
+}
+
+.aboutusMain > img {
+    max-width: 60%;
+    margin-bottom: 200px;
+}
+
+.aboutusMain h1 {
+    position: absolute;
+    top: calc(100px + 4%);
+    font-size: 6em;
+}
+
+.aboutusMain .features .feature{
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    margin-right: 100px;
+}
+
+.aboutusMain .features .feature:nth-child(1){
+    background-color: #375e97;
+}
+
+.aboutusMain .features .feature:nth-child(2){
+    padding: 0 100px 0 0;
+    margin: 0 0 0 100px;
+    background-color: #fb6542;
+}
+
+.aboutusMain .features .feature:nth-child(3){
+    background-color: #3f681c;
+}
+
+.aboutusMain .features .feature span{
+    padding: 0 20px;
+    font-size: 1.8em;
+    color: #fcfcfc;
+}
+
+.aboutusMain .features .feature img{
+    width: 300px;
+    height: 300px;
+}
+
+/*--------------------LOGIN AND REGISTER--------------------*/
+
+main.loginMain {
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+}
+
+.loginMain form .formFooter {
+    display: flex;
+    justify-content: space-between;
+}
