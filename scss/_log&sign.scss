@@ -1,0 +1,19 @@
+/*--------------------LOGIN AND REGISTER--------------------*/
+
+main.loginMain {
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+
+    form {
+        @media screen and (max-width: 600px) {
+            height: 500px;
+            width: 400px;
+        }
+
+        .formFooter {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+/*--------------------INDEX--------------------*/
+
+main.indexMain {
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 75px 225px 75px;
+
+    .carousel {
+        width: 100vw;
+        height: 600px;
+        margin-bottom: 50px;
+        background-color: #cae3d7;
+        @media screen and (max-width: 600px) {
+            height: 400px;
+        }
+
+        img {
+            max-width: 100vw;
+            height: 600px;
+            object-fit: contain;
+
+            @media screen and (max-width: 600px) {
+                height: 400px;
+            }
+        }
+    }
+
+    .indexPresentation {
+        display: flex;
+
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .mainText {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+            width: 50%;
+
+            @media screen and (max-width: 600px) {
+                width: 100%;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+
+        div {
+            h1 {
+                font: $charmonman;
+                font-size: 3rem;
+                color: black;
+            }
+
+            h4 {
+                width: 55%;
+                font-size: 1.6rem;
+                text-align: right;
+                color: black;
+
+                @media screen and (max-width: 1024px) {
+                    width: 80%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    border-radius: 50%;
+    background-color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 600px;
+    width: 500px;
+    padding: 25px 50px;
+    border: #fcfcfc solid 1px;
+    color: #fcfcfc;
+    background-color: black;
+
+    a {
+        text-decoration: underline;
+        color: rgb(77, 91, 214);
+    }
+
+    h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    label {
+        font-size: 1.4rem;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        input {
+            padding: 15px 5px;
+            font-size: 1.2rem;
+        }
+    }
+
+    input[type='submit'] {
+        width: 50%;
+        height: 40px;
+        border: none;
+        border-bottom: #fcfcfc solid 1px;
+        margin-left: 25% !important;
+        font-size: 1.3rem;
+    }
+}
