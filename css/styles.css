@@ -10,23 +10,11 @@
 body {
   position: relative;
   background-color: #eee3d7;
-  width: 100vw;
   min-height: 100vh;
 }
 
 ul li {
   list-style: none;
-}
-
-@media screen and (max-width: 768px) {
-  ol,
-  ul {
-    padding-left: 0;
-  }
-}
-a {
-  text-decoration: none;
-  color: initial;
 }
 
 nav {
@@ -37,12 +25,12 @@ nav {
   height: 100px;
   background-color: #000;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1110px) {
   nav {
     padding: 0 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   nav {
     padding: 0 5px;
   }
@@ -50,9 +38,14 @@ nav {
 nav img {
   height: 100px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   nav img {
     height: 80px;
+  }
+}
+@media screen and (max-width: 650px) {
+  nav img {
+    height: 60px;
   }
 }
 nav ul {
@@ -60,6 +53,11 @@ nav ul {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0;
+}
+@media screen and (max-width: 500px) {
+  nav ul {
+    display: none;
+  }
 }
 nav ul .lists {
   display: flex;
@@ -70,9 +68,15 @@ nav ul li {
   padding: 10px 50px;
   font-size: 1.2rem;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1110px) {
   nav ul li {
     padding: 4px 15px;
+  }
+}
+@media screen and (max-width: 650px) {
+  nav ul li {
+    padding: 5px 5px;
+    font-size: 1rem;
   }
 }
 nav ul li.loginList {
@@ -86,7 +90,7 @@ nav ul li.loginList {
   letter-spacing: 3px;
   color: #fafbfd;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   nav ul li.loginList {
     margin-left: 10px;
     font-size: 1rem;
@@ -95,6 +99,64 @@ nav ul li.loginList {
 }
 nav ul li.loginList:hover {
   background-color: #b60c23;
+}
+nav button.menu-bar {
+  display: none;
+  height: 28px;
+  width: 28px;
+  border: none;
+  border-radius: 30%;
+  margin-right: 20px;
+  transform: scale(1.2);
+  color: #fcfcfc;
+  background-color: #000;
+  transition: color, background-color 0.3s;
+}
+@media screen and (max-width: 500px) {
+  nav button.menu-bar {
+    display: inline-block;
+  }
+}
+nav button.menu-bar:active {
+  color: #000;
+  background-color: #fcfcfc;
+}
+nav .menu-section {
+  position: fixed;
+  top: 0;
+  right: -70vw;
+  width: 70vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: #fcfcfc;
+}
+nav .menu-section > span {
+  position: relative;
+  top: -35px;
+  left: 15px;
+}
+nav .menu-section ul {
+  padding: 50px 30px;
+}
+@media screen and (max-width: 500px) {
+  nav .menu-section ul {
+    display: inline-block;
+  }
+}
+nav .menu-section ul .lists {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 25px;
+}
+nav .menu-section ul .lists a li {
+  width: 100%;
+  border-bottom: black 1px solid;
+  font-size: 1.3rem;
+  color: #000;
+}
+nav .menu-section ul .lists .loginList {
+  color: #fcfcfc;
 }
 
 .commonButton {
@@ -131,10 +193,35 @@ footer ul {
   gap: 40px;
   font-size: 1.1rem;
 }
+@media screen and (max-width: 500px) {
+  footer ul {
+    gap: 30px;
+    font-size: 0.9rem;
+  }
+}
 footer ul li a {
   color: #fafbfd;
 }
 
+@media screen and (max-width: 800px) {
+  ol,
+  ul {
+    padding-left: 0;
+  }
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+@media screen and (max-width: 500px) {
+  button.menu-bar:focus + .menu-section {
+    right: 0;
+  }
+  .menu-section:hover {
+    right: 0;
+  }
+}
 /*--------------------INDEX--------------------*/
 main.indexMain {
   flex-direction: column;
@@ -142,18 +229,34 @@ main.indexMain {
   padding: 75px 75px 225px 75px;
 }
 main.indexMain .carousel {
-  width: 100vw;
+  width: 90vw;
   height: 600px;
   margin-bottom: 50px;
   background-color: #cae3d7;
 }
+@media screen and (max-width: 650px) {
+  main.indexMain .carousel {
+    height: 400px;
+  }
+}
 main.indexMain .carousel img {
-  max-width: 100vw;
+  max-width: 100%;
   height: 600px;
   object-fit: contain;
 }
+@media screen and (max-width: 650px) {
+  main.indexMain .carousel img {
+    height: 400px;
+  }
+}
 main.indexMain .indexPresentation {
   display: flex;
+}
+@media screen and (max-width: 650px) {
+  main.indexMain .indexPresentation {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 main.indexMain .indexPresentation .mainText {
   display: flex;
@@ -162,10 +265,23 @@ main.indexMain .indexPresentation .mainText {
   gap: 80px;
   width: 50%;
 }
+@media screen and (max-width: 650px) {
+  main.indexMain .indexPresentation .mainText {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
 main.indexMain .indexPresentation div h1 {
   font: bold 1em "Charmonman", cursive;
   font-size: 3rem;
   color: black;
+}
+@media screen and (max-width: 500px) {
+  main.indexMain .indexPresentation div h1 {
+    font-size: 2.5rem;
+    width: 80vw;
+  }
 }
 main.indexMain .indexPresentation div h4 {
   width: 55%;
@@ -173,7 +289,7 @@ main.indexMain .indexPresentation div h4 {
   text-align: right;
   color: black;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1110px) {
   main.indexMain .indexPresentation div h4 {
     width: 80%;
     text-align: left;
@@ -197,6 +313,12 @@ form {
   color: #fcfcfc;
   background-color: black;
 }
+@media screen and (max-width: 500px) {
+  form {
+    width: 85vw;
+    height: 400px;
+  }
+}
 form a {
   text-decoration: underline;
   color: rgb(77, 91, 214);
@@ -205,17 +327,38 @@ form h3 {
   font-size: 2rem;
   text-align: center;
 }
+@media screen and (max-width: 500px) {
+  form h3 {
+    font-size: 1.4rem;
+  }
+}
 form label {
   font-size: 1.4rem;
+}
+@media screen and (max-width: 500px) {
+  form label {
+    font-size: 0.9rem;
+  }
 }
 form .inputs {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
+@media screen and (max-width: 500px) {
+  form .inputs {
+    gap: 7.5px;
+  }
+}
 form .inputs input {
   padding: 15px 5px;
   font-size: 1.2rem;
+}
+@media screen and (max-width: 500px) {
+  form .inputs input {
+    padding: 7.5px 2.5px;
+    font-size: 0.8rem;
+  }
 }
 form input[type=submit] {
   width: 50%;
@@ -224,6 +367,13 @@ form input[type=submit] {
   border-bottom: #fcfcfc solid 1px;
   margin-left: 25% !important;
   font-size: 1.3rem;
+}
+@media screen and (max-width: 500px) {
+  form input[type=submit] {
+    height: 25px;
+    margin-left: auto;
+    font-size: 0.9rem;
+  }
 }
 
 /*--------------------PRODUCTOS--------------------*/
@@ -238,6 +388,11 @@ aside {
   padding: 25px;
   border-right: lightgray solid 1px;
   background-color: #fcfcfc;
+}
+@media screen and (max-width: 650px) {
+  aside {
+    padding: 15px;
+  }
 }
 aside h4 {
   text-align: center;
@@ -282,10 +437,16 @@ aside p .btn-primary:hover, aside p .btn-primary:active {
   gap: 150px;
   padding: 30px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .productosPage .productosArticles {
     gap: 100px;
     padding: 15px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .productosPage .productosArticles {
+    gap: 40px;
+    padding: 5px;
   }
 }
 .productosPage .productosArticles article {
@@ -300,10 +461,16 @@ aside p .btn-primary:hover, aside p .btn-primary:active {
   background-color: #cae3d7;
   transition: 0.4s;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .productosPage .productosArticles article {
     width: 200px;
     height: 333px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .productosPage .productosArticles article {
+    width: 125px;
+    height: 200px;
   }
 }
 .productosPage .productosArticles article:hover {
@@ -313,18 +480,30 @@ aside p .btn-primary:hover, aside p .btn-primary:active {
   width: 250px;
   height: 300px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .productosPage .productosArticles article img {
     width: 150px;
     height: 200px;
   }
 }
+@media screen and (max-width: 650px) {
+  .productosPage .productosArticles article img {
+    width: 100px;
+    height: 150px;
+  }
+}
 .productosPage .productosArticles article .articleDesc {
   font-size: 1.2em;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .productosPage .productosArticles article .articleDesc {
     font-size: 1.1rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .productosPage .productosArticles article .articleDesc {
+    font-size: 0.7rem;
     text-align: center;
   }
 }
@@ -338,18 +517,29 @@ aside p .btn-primary:hover, aside p .btn-primary:active {
   font-size: 1.4rem;
   font-weight: bold;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .productosPage .productosArticles article .articleAdds .articlePrice {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .productosPage .productosArticles article .articleAdds .articlePrice {
+    font-size: 0.8rem;
   }
 }
 .productosPage .productosArticles article .articleAdds .articleButton {
   background-color: #d7cae3;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .productosPage .productosArticles article .articleAdds .articleButton {
     padding: 3px 10px;
     font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .productosPage .productosArticles article .articleAdds .articleButton {
+    padding: 3px 5px;
+    font-size: 0.6rem;
   }
 }
 
@@ -363,12 +553,17 @@ main.aboutusMain > img {
   max-width: 60%;
   margin-bottom: 200px;
 }
+@media screen and (max-width: 650px) {
+  main.aboutusMain > img {
+    margin-bottom: 50px;
+  }
+}
 main.aboutusMain h1 {
   position: absolute;
   top: calc(100px + 4%);
-  font-size: 6rem;
+  font-size: 7vw;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   main.aboutusMain h1 {
     top: calc(100px + 1.5%);
     font-size: 3rem;
@@ -396,19 +591,30 @@ main.aboutusMain .features .feature span {
   font-size: 1.8rem;
   color: #fcfcfc;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   main.aboutusMain .features .feature span {
     font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  main.aboutusMain .features .feature span {
+    font-size: 0.8rem;
   }
 }
 main.aboutusMain .features .feature img {
   width: 300px;
   height: 300px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   main.aboutusMain .features .feature img {
     width: 200px;
     height: 200px;
+  }
+}
+@media screen and (max-width: 650px) {
+  main.aboutusMain .features .feature img {
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -417,6 +623,12 @@ main.loginMain {
   align-items: center;
   height: 100vh;
   padding: 0;
+}
+@media screen and (max-width: 650px) {
+  main.loginMain form {
+    height: 500px;
+    width: 400px;
+  }
 }
 main.loginMain form .formFooter {
   display: flex;

@@ -9,7 +9,7 @@ main.aboutusMain {
         max-width: 60%;
         margin-bottom: 200px;
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 650px) {
             margin-bottom: 50px;
         }
     }
@@ -17,9 +17,9 @@ main.aboutusMain {
     h1 {
         position: absolute;
         top: calc(100px + 4%);
-        font-size: 6rem;
+        font-size: 7vw;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 800px) {
             top: calc(100px + 1.5%);
             font-size: 3rem;
         }
@@ -51,11 +51,11 @@ main.aboutusMain {
                 font-size: 1.8rem;
                 color: #fcfcfc;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 800px) {
                     font-size: 1.1rem;
                 }
 
-                @media screen and (max-width: 600px) {
+                @media screen and (max-width: 650px) {
                     font-size: 0.8rem;
                 }
             }
@@ -64,12 +64,12 @@ main.aboutusMain {
                 width: 300px;
                 height: 300px;
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 800px) {
                     width: 200px;
                     height: 200px;
                 }
 
-                @media screen and (max-width: 600px) {
+                @media screen and (max-width: 650px) {
                     width: 150px;
                     height: 150px;
                 }

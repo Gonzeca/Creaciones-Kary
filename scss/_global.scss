@@ -18,7 +18,6 @@ $charmonman: bold 1em "Charmonman", cursive;
 body {
     position: relative;
     background-color: #eee3d7;
-    width: 100vw;
     min-height: 100vh;
 }
 
@@ -26,18 +25,6 @@ ul {
     li {
         list-style: none;
     }
-}
-
-@media screen and (max-width: 768px) {
-    ol,
-    ul {
-        padding-left: 0;
-    }
-}
-
-a {
-    text-decoration: none;
-    color: initial;
 }
 
 nav {
@@ -48,22 +35,22 @@ nav {
     height: 100px;
     background-color: $black;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1110px) {
         padding: 0 20px;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         padding: 0 5px;
     }
 
     img {
         height: 100px;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 800px) {
             height: 80px;
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 650px) {
             height: 60px;
         }
     }
@@ -73,6 +60,10 @@ nav {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 0;
+
+        @media screen and (max-width: 500px) {
+            display: none;
+        }
 
         .lists {
             display: flex;
@@ -84,11 +75,11 @@ nav {
             padding: 10px 50px;
             font-size: 1.2rem;
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1110px) {
                 padding: 4px 15px;
             }
 
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 650px) {
                 padding: 5px 5px;
                 font-size: 1rem;
             }
@@ -105,7 +96,7 @@ nav {
             letter-spacing: 3px;
             color: #fafbfd;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 800px) {
                 margin-left: 10px;
                 font-size: 1rem;
                 text-align: center;
@@ -113,6 +104,72 @@ nav {
 
             &:hover {
                 background-color: #b60c23;
+            }
+        }
+    }
+
+    button.menu-bar {
+        display: none;
+        height: 28px;
+        width: 28px;
+        border: none;
+        border-radius: 30%;
+        margin-right: 20px;
+        transform: scale(1.2);
+        color: $white;
+        background-color: $black;
+        transition: color, background-color 0.3s;
+
+        @media screen and (max-width: 500px) {
+            display: inline-block;
+        }
+
+        &:active {
+            color: $black;
+            background-color: $white;
+        }
+    }
+
+    .menu-section {
+        position: fixed;
+        top: 0;
+        right: -70vw;
+        width: 70vw;
+        height: 100vh;
+        z-index: 999;
+        background-color: $white;
+    
+        >span {
+            position: relative;
+            top: -35px;
+            left: 15px;
+        }
+    
+        ul {
+            padding: 50px 30px;
+    
+            @media screen and (max-width: 500px) {
+                display: inline-block;
+            }
+    
+            .lists {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 25px;
+                
+                a {
+                    li {
+                        width: 100%;
+                        border-bottom: black 1px solid;
+                        font-size: 1.3rem;
+                        color: $black;
+                    }
+                }
+    
+                .loginList {
+                    color: $white;
+                }
             }
         }
     }
@@ -153,10 +210,37 @@ footer {
         gap: 40px;
         font-size: 1.1rem;
 
+        @media screen and (max-width: 500px) {
+            gap: 30px;
+            font-size: 0.9rem;
+        }
+
         li {
             a {
                 color: #fafbfd;
             }
         } 
+    }
+}
+
+@media screen and (max-width: 800px) {
+    ol,
+    ul {
+        padding-left: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: initial;
+}
+
+@media screen and (max-width: 500px) {
+    button.menu-bar:focus + .menu-section {
+        right: 0;
+    }
+    
+    .menu-section:hover {
+        right: 0;
     }
 }
