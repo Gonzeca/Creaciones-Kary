@@ -21,7 +21,6 @@ main.aboutusMain {
 
         @media screen and (max-width: 800px) {
             top: calc(100px + 1.5%);
-            font-size: 3rem;
         }
     }
 
@@ -32,6 +31,11 @@ main.aboutusMain {
             padding-left: 100px;
             margin-right: 100px;
 
+            @media screen and (max-width: 500px) {
+                padding: 0;
+                margin: 0;
+            }
+
             @for $i from 1 through 3 {
                 &:nth-child(#{$i}) {
                     @if $i == 1 {
@@ -40,6 +44,11 @@ main.aboutusMain {
                         padding: 0 100px 0 0;
                         margin: 0 0 0 100px;
                         background-color: #fb6542;
+
+                        @media screen and (max-width: 500px) {
+                            padding: 0;
+                            margin: 0;
+                        }
                     } @else {
                         background-color: #3f681c;
                     }

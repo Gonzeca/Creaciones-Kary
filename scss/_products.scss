@@ -16,13 +16,32 @@ aside {
         padding: 15px;
     }
 
+    @media screen and (max-width: 500px) {
+        width: 100%;
+        padding: 7px;
+    }
+
     h4 {
         text-align: center;
+
+        @media screen and (max-width: 500px) {
+            font-size: 1.2rem;
+        }
     }
 
     .categories {
         display: flex;
         flex-direction: column;
+
+        .d-inline-flex {
+            margin: 0;
+
+            button {
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                }
+            }
+        }
 
         .collapse .card, .collapsing .card {
             border: 0px none transparent !important;
@@ -31,6 +50,18 @@ aside {
                 display: flex;
                 align-items: center;
                 gap: 8px;
+
+                input {
+                    @media screen and (max-width: 500px) {
+                        width: 8px;
+                    }
+                }
+
+                label {
+                    @media screen and (max-width: 500px) {
+                        font-size: 0.8rem;
+                    }
+                }
             }
         }
     }
@@ -54,12 +85,27 @@ aside {
 }
 
 .productosPage {
+    @media screen and (max-width: 500px) {
+        width: 92%;
+    }
+
     .productosHeader {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         gap: 10px;
         padding: 25px 40px;
+
+        @media screen and (max-width: 500px) {
+            font-size: 0.8rem;
+            gap: 5px;
+        }
+
+        .dropdown {
+            button {
+                font-size: 0.7rem;
+            }
+        }
     }
 
     .productosArticles {

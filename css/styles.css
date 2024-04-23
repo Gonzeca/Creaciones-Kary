@@ -394,12 +394,31 @@ aside {
     padding: 15px;
   }
 }
+@media screen and (max-width: 500px) {
+  aside {
+    width: 100%;
+    padding: 7px;
+  }
+}
 aside h4 {
   text-align: center;
+}
+@media screen and (max-width: 500px) {
+  aside h4 {
+    font-size: 1.2rem;
+  }
 }
 aside .categories {
   display: flex;
   flex-direction: column;
+}
+aside .categories .d-inline-flex {
+  margin: 0;
+}
+@media screen and (max-width: 500px) {
+  aside .categories .d-inline-flex button {
+    width: 100%;
+  }
 }
 aside .categories .collapse .card, aside .categories .collapsing .card {
   border: 0px none transparent !important;
@@ -408,6 +427,16 @@ aside .categories .collapse .card .category, aside .categories .collapsing .card
   display: flex;
   align-items: center;
   gap: 8px;
+}
+@media screen and (max-width: 500px) {
+  aside .categories .collapse .card .category input, aside .categories .collapsing .card .category input {
+    width: 8px;
+  }
+}
+@media screen and (max-width: 500px) {
+  aside .categories .collapse .card .category label, aside .categories .collapsing .card .category label {
+    font-size: 0.8rem;
+  }
 }
 aside p .btn-primary {
   display: flex;
@@ -423,12 +452,26 @@ aside p .btn-primary:hover, aside p .btn-primary:active {
   background-color: #760817 !important;
 }
 
+@media screen and (max-width: 500px) {
+  .productosPage {
+    width: 92%;
+  }
+}
 .productosPage .productosHeader {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
   padding: 25px 40px;
+}
+@media screen and (max-width: 500px) {
+  .productosPage .productosHeader {
+    font-size: 0.8rem;
+    gap: 5px;
+  }
+}
+.productosPage .productosHeader .dropdown button {
+  font-size: 0.7rem;
 }
 .productosPage .productosArticles {
   display: flex;
@@ -566,7 +609,6 @@ main.aboutusMain h1 {
 @media screen and (max-width: 800px) {
   main.aboutusMain h1 {
     top: calc(100px + 1.5%);
-    font-size: 3rem;
   }
 }
 main.aboutusMain .features .feature {
@@ -575,6 +617,12 @@ main.aboutusMain .features .feature {
   padding-left: 100px;
   margin-right: 100px;
 }
+@media screen and (max-width: 500px) {
+  main.aboutusMain .features .feature {
+    padding: 0;
+    margin: 0;
+  }
+}
 main.aboutusMain .features .feature:nth-child(1) {
   background-color: #375e97;
 }
@@ -582,6 +630,12 @@ main.aboutusMain .features .feature:nth-child(2) {
   padding: 0 100px 0 0;
   margin: 0 0 0 100px;
   background-color: #fb6542;
+}
+@media screen and (max-width: 500px) {
+  main.aboutusMain .features .feature:nth-child(2) {
+    padding: 0;
+    margin: 0;
+  }
 }
 main.aboutusMain .features .feature:nth-child(3) {
   background-color: #3f681c;
