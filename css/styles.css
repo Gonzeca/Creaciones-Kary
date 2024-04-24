@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Antic&family=Charmonman:wght@400;700&display=swap");
 /*COLORS*/
 /*FONTS*/
+/*MIXINS*/
 * {
   font: normal 1em "Antic", sans-serif;
   padding: 0;
@@ -124,16 +125,18 @@ nav button.menu-bar:active {
 nav .menu-section {
   position: fixed;
   top: 0;
-  right: -70vw;
   width: 70vw;
   height: 100vh;
   z-index: 999;
   background-color: #fcfcfc;
+  transition: 0.3s;
+  right: -70vw;
 }
 nav .menu-section > span {
   position: relative;
   top: -35px;
   left: 15px;
+  transition: transform 0.2s;
 }
 nav .menu-section ul {
   padding: 50px 30px;
@@ -218,8 +221,20 @@ a {
   button.menu-bar:focus + .menu-section {
     right: 0;
   }
+  button.menu-bar:focus + .menu-section > span {
+    transform: rotate(180deg);
+  }
   .menu-section:hover {
     right: 0;
+  }
+  .menu-section:hover > span {
+    transform: rotate(180deg);
+  }
+  .menu-section:has(> span:hover) {
+    right: -70vw;
+  }
+  .menu-section:has(> span:hover) > span {
+    transform: rotate(0deg);
   }
 }
 /*--------------------INDEX--------------------*/
@@ -229,18 +244,22 @@ main.indexMain {
   padding: 75px 75px 225px 75px;
 }
 main.indexMain .carousel {
-  width: 90vw;
-  height: 600px;
   margin-bottom: 50px;
-  background-color: #cae3d7;
 }
 @media screen and (max-width: 650px) {
   main.indexMain .carousel {
     height: 400px;
   }
 }
+main.indexMain .carousel .carousel-inner {
+  width: 56vw;
+}
+@media screen and (max-width: 1110px) {
+  main.indexMain .carousel .carousel-inner {
+    width: 90vw;
+  }
+}
 main.indexMain .carousel img {
-  max-width: 100%;
   height: 600px;
   object-fit: contain;
 }
@@ -249,10 +268,16 @@ main.indexMain .carousel img {
     height: 400px;
   }
 }
+@media screen and (max-width: 650px) {
+  main.indexMain .carousel > button > span {
+    width: 6vw;
+    height: 6vw;
+  }
+}
 main.indexMain .indexPresentation {
   display: flex;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   main.indexMain .indexPresentation {
     flex-direction: column;
     align-items: center;
@@ -265,7 +290,7 @@ main.indexMain .indexPresentation .mainText {
   gap: 80px;
   width: 50%;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   main.indexMain .indexPresentation .mainText {
     width: 100%;
     margin-bottom: 20px;
@@ -463,6 +488,7 @@ aside p .btn-primary:hover, aside p .btn-primary:active {
   align-items: center;
   gap: 10px;
   padding: 25px 40px;
+  font-size: 1.3rem;
 }
 @media screen and (max-width: 500px) {
   .productosPage .productosHeader {
@@ -471,7 +497,12 @@ aside p .btn-primary:hover, aside p .btn-primary:active {
   }
 }
 .productosPage .productosHeader .dropdown button {
-  font-size: 0.7rem;
+  font-size: 1.3rem;
+}
+@media screen and (max-width: 500px) {
+  .productosPage .productosHeader .dropdown button {
+    font-size: 0.7rem;
+  }
 }
 .productosPage .productosArticles {
   display: flex;
@@ -519,18 +550,62 @@ aside p .btn-primary:hover, aside p .btn-primary:active {
 .productosPage .productosArticles article:hover {
   transform: scale(1.2);
 }
-.productosPage .productosArticles article img {
+.productosPage .productosArticles article:nth-child(1) > .articleImg {
+  background-image: url("../media/products/clothes/product1.jpg");
+}
+.productosPage .productosArticles article:nth-child(1):hover > .articleImg {
+  background-image: url("../media/products/hover/product1.jpg");
+}
+.productosPage .productosArticles article:nth-child(2) > .articleImg {
+  background-image: url("../media/products/clothes/product2.jpg");
+}
+.productosPage .productosArticles article:nth-child(2):hover > .articleImg {
+  background-image: url("../media/products/hover/product2.jpg");
+}
+.productosPage .productosArticles article:nth-child(3) > .articleImg {
+  background-image: url("../media/products/clothes/product3.jpg");
+}
+.productosPage .productosArticles article:nth-child(3):hover > .articleImg {
+  background-image: url("../media/products/hover/product3.jpg");
+}
+.productosPage .productosArticles article:nth-child(4) > .articleImg {
+  background-image: url("../media/products/clothes/product4.jpg");
+}
+.productosPage .productosArticles article:nth-child(4):hover > .articleImg {
+  background-image: url("../media/products/hover/product4.jpg");
+}
+.productosPage .productosArticles article:nth-child(5) > .articleImg {
+  background-image: url("../media/products/clothes/product5.jpg");
+}
+.productosPage .productosArticles article:nth-child(5):hover > .articleImg {
+  background-image: url("../media/products/hover/product5.jpg");
+}
+.productosPage .productosArticles article:nth-child(6) > .articleImg {
+  background-image: url("../media/products/clothes/product6.jpg");
+}
+.productosPage .productosArticles article:nth-child(6):hover > .articleImg {
+  background-image: url("../media/products/hover/product6.jpg");
+}
+.productosPage .productosArticles article:nth-child(7) > .articleImg {
+  background-image: url("../media/products/clothes/product7.jpg");
+}
+.productosPage .productosArticles article:nth-child(7):hover > .articleImg {
+  background-image: url("../media/products/hover/product7.jpg");
+}
+.productosPage .productosArticles article .articleImg {
   width: 250px;
   height: 300px;
+  background-repeat: round;
+  transition: background-image 0.5s;
 }
 @media screen and (max-width: 800px) {
-  .productosPage .productosArticles article img {
+  .productosPage .productosArticles article .articleImg {
     width: 150px;
     height: 200px;
   }
 }
 @media screen and (max-width: 650px) {
-  .productosPage .productosArticles article img {
+  .productosPage .productosArticles article .articleImg {
     width: 100px;
     height: 150px;
   }

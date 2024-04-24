@@ -6,16 +6,20 @@ main.indexMain {
     padding: 75px 75px 225px 75px;
 
     .carousel {
-        width: 90vw;
-        height: 600px;
         margin-bottom: 50px;
-        background-color: #cae3d7;
         @media screen and (max-width: 650px) {
             height: 400px;
         }
 
+        .carousel-inner {
+            width: 56vw;
+
+            @media screen and (max-width: 1110px) {
+                width: 90vw;
+            }
+        }
+
         img {
-            max-width: 100%;
             height: 600px;
             object-fit: contain;
 
@@ -23,12 +27,21 @@ main.indexMain {
                 height: 400px;
             }
         }
+        
+        >button {
+            >span {
+                @media screen and (max-width: 650px) {
+                    width: 6vw;
+                    height: 6vw;
+                }
+            }
+        }
     }
 
     .indexPresentation {
         display: flex;
 
-        @media screen and (max-width: 650px) {
+        @media screen and (max-width: 800px) {
             flex-direction: column;
             align-items: center;
         }
@@ -40,7 +53,7 @@ main.indexMain {
             gap: 80px;
             width: 50%;
 
-            @media screen and (max-width: 650px) {
+            @media screen and (max-width: 800px) {
                 width: 100%;
                 margin-bottom: 20px;
                 text-align: center;

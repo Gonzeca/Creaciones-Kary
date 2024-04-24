@@ -95,6 +95,7 @@ aside {
         align-items: center;
         gap: 10px;
         padding: 25px 40px;
+        font-size: 1.3rem;
 
         @media screen and (max-width: 500px) {
             font-size: 0.8rem;
@@ -103,7 +104,11 @@ aside {
 
         .dropdown {
             button {
-                font-size: 0.7rem;
+                font-size: 1.3rem;
+
+                @media screen and (max-width: 500px) {
+                    font-size: 0.7rem;
+                }
             }
         }
     }
@@ -151,9 +156,20 @@ aside {
                 transform: scale(1.2);
             }
 
-            img {
+            @for $i from 1 through 7 {
+                &:nth-child(#{$i}) >.articleImg{
+                    background-image: url("../media/products/clothes/product#{$i}.jpg");
+                }
+                &:nth-child(#{$i}):hover >.articleImg{
+                    background-image: url("../media/products/hover/product#{$i}.jpg");
+                }
+            }
+
+            .articleImg {
                 width: 250px;
                 height: 300px;
+                background-repeat: round;
+                transition: background-image 0.5s;
 
                 @media screen and (max-width: 800px) {
                     width: 150px;

@@ -8,6 +8,15 @@ $red: #760817;
 $antic: normal 1em "Antic", sans-serif;
 $charmonman: bold 1em "Charmonman", cursive;
 
+/*MIXINS*/
+@mixin menuOpen ($opened: false) {
+    @if $opened {
+        right: 0;
+    } @else {
+        right: -70vw;
+    }
+}
+
 
 * {
     font: $antic;
@@ -133,16 +142,18 @@ nav {
     .menu-section {
         position: fixed;
         top: 0;
-        right: -70vw;
         width: 70vw;
         height: 100vh;
         z-index: 999;
         background-color: $white;
+        transition: 0.3s;
+        @include menuOpen();
     
         >span {
             position: relative;
             top: -35px;
             left: 15px;
+            transition: transform 0.2s;
         }
     
         ul {
@@ -237,10 +248,26 @@ a {
 
 @media screen and (max-width: 500px) {
     button.menu-bar:focus + .menu-section {
-        right: 0;
+        @include menuOpen(true);
+
+        >span {
+            transform: rotate(180deg);
+        }
     }
     
     .menu-section:hover {
-        right: 0;
+        @include menuOpen(true);
+
+        >span {
+            transform: rotate(180deg);
+        }
+    }
+
+    .menu-section:has(> span:hover) {
+        @include menuOpen();
+
+        >span {
+            transform: rotate(0deg);
+        }
     }
 }
